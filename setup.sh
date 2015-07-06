@@ -2,8 +2,6 @@
 
 # Major installs; e.g., package managers
 
-bin=$(dirname -- "$0")
-
 fancy_echo() {
   local fmt="$1"; shift
 
@@ -71,6 +69,10 @@ gem_install_or_update() {
   fi
 }
 
+fancy_echo "Setup ..."
+
+bin=$(dirname -- "$0")
+
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
     curl -fsS \
@@ -107,7 +109,13 @@ fi
 #   . "$HOME/.setup.local"
 # fi
 
-fancy_echo "Checking for more setup in $bin/setup.local..."
-if [ -f "$bin/setup.local" ]; then
-  . "$bin/setup.local"
+if [ -f "$bin/setup.osx.sh" ]; then
+  . "$bin/setup.osx.sh"
 fi
+
+fancy_echo "Checking for more setup in $bin/setup.local..."
+if [ -f "$bin/setup.local.sh" ]; then
+  . "$bin/setup.local.sh"
+fi
+
+fancy_echo "Setup complete."

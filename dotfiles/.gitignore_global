@@ -1,0 +1,12 @@
+# NPM
+npm-debug.log
+
+# Sass
+.sass-cache/x
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Mac OS X
+.DS_Store

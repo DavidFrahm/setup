@@ -2,6 +2,8 @@
 
 # Specific local installs and config
 
+fancy_echo "Secondary local setup ..."
+
 # Not using Cask for Google Chrome, due to known and potential issues
 
 # Cask default is latest JDK
@@ -22,3 +24,5 @@ git config --global user.name "David Frahm"
 git config --global user.email david@midmoapps.com
 git config --global push.default matching
 git config --global push.default simple
+
+fancy_echo "Secondary local setup complete."
