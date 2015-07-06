@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
+[user]
+	name = David Frahm
+	email = david@midmoapps.com

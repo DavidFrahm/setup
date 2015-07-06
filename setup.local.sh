@@ -4,6 +4,8 @@
 
 fancy_echo "Secondary local setup ..."
 
+bin=$(dirname -- "$0")
+
 # Not using Cask for Google Chrome, due to known and potential issues
 
 # Cask default is latest JDK
@@ -20,9 +22,11 @@ fancy_echo "Clean up non-current Brew and Cask downloads ..."
 brew cleanup --outdated
 brew cask cleanup --outdated
 
-git config --global user.name "David Frahm"
-git config --global user.email david@midmoapps.com
-git config --global push.default matching
-git config --global push.default simple
+# Dotfiles
+fancy_echo "Copying dotfiles ..."
+for dotfile in ".gitignore_global" \
+    ".gitconfig"; do
+	cp $bin/dotfiles/"${dotfile}" ~/ > /dev/null 2>&1
+done
 
 fancy_echo "Secondary local setup complete."

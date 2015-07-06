@@ -73,6 +73,10 @@ fancy_echo "Setup ..."
 
 bin=$(dirname -- "$0")
 
+#TODO Obtain sudo for life of this script
+# $ sudo -v
+# and other stuff, see Paul Irish dotfiles
+
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
     curl -fsS \
