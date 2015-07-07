@@ -12,8 +12,19 @@ bin=$(dirname -- "$0")
 brew cask install java
 java -version
 
+brew_install_or_upgrade gradle
+gradle -v
+
 brew_install_or_upgrade 'node'
 fancy_echo "Node version: $(node -v)"
+fancy_echo "NPM version: $(npm -v)"
+
+npm install -g bower
+fancy_echo "Bower version: $(bower -v)"
+npm install -g gulp
+fancy_echo "Gulp version: $(gulp -v)"
+npm install -g karma-cli
+# Getting version of global karma not as simple as others
 
 # Others for consideration:
 # brew_install_or_upgrade 'heroku-toolbelt'

@@ -18,8 +18,8 @@ This project was initially based on `mac` script from [thoughtbot laptop project
 # Usage
 
 1. Clone repo to your laptop
-2. Review and edit as necessary to fit your needs
-3. Run it:
+1. Review and edit as necessary to fit your needs
+1. Run it:
 
     $ ./Projects/setup/run.sh
 
