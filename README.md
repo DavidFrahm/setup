@@ -13,7 +13,7 @@ Many others exist, but I thought most were over-engineered and I wanted to learn
 I use the term 'created' loosely, as I borrowed heavily from various others around the web.
 
 This project was initially based on `mac` script from [thoughtbot laptop project](https://github.com/thoughtbot/laptop)
-* See original for Zshell, Ruby, and more
+* See original for Zshell, Ruby, and more that I didn't need
 
 # Usage
 

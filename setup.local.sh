@@ -37,6 +37,9 @@ npm install -g karma-cli
 
 # Not using Cask for Google Chrome, due to known and potential issues
 
+brew cask install google-drive
+brew cask install dropbox
+
 fancy_echo "Clean up non-current Brew and Cask downloads ..."
 brew cleanup --outdated
 brew cask cleanup --outdated
