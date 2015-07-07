@@ -6,7 +6,7 @@ fancy_echo "Secondary local setup ..."
 
 bin=$(dirname -- "$0")
 
-# Not using Cask for Google Chrome, due to known and potential issues
+#--- Android dev ---
 
 # Cask default is latest JDK
 brew cask install java
@@ -14,6 +14,10 @@ java -version
 
 brew_install_or_upgrade gradle
 gradle -v
+
+brew cask install androidtool
+
+#--- Web dev ---
 
 brew_install_or_upgrade 'node'
 fancy_echo "Node version: $(node -v)"
@@ -28,6 +32,10 @@ npm install -g karma-cli
 
 # Others for consideration:
 # brew_install_or_upgrade 'heroku-toolbelt'
+
+#--- Other ---
+
+# Not using Cask for Google Chrome, due to known and potential issues
 
 fancy_echo "Clean up non-current Brew and Cask downloads ..."
 brew cleanup --outdated
