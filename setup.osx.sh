@@ -14,6 +14,12 @@ fancy_echo "Mac OS X configuration ..."
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Enable snap-to-grid for icons in all icon views and dialogs
+/usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
