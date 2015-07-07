@@ -33,7 +33,8 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Faster key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write NSGlobalDomain KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+# This was too quick
+#defaults write NSGlobalDomain KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 ###############################################################################
 # Screen                                                                      #
