@@ -7,7 +7,7 @@ My solution for laptop configuration management, which includes:
 * Configure some OS X [dotfiles](https://dotfiles.github.io/); e.g., Git, aliases
 * Set various OS X preferences and settings
 
-All operations are designed to be idemppotent, meaning that its safe to run the script repeatedly.
+All operations are designed to be idempotent, meaning that its safe to run the script repeatedly.
 
 Many others exist, but I thought most were over-engineered and I wanted to learn more about this so I created my own.
 I use the term 'created' loosely, as I borrowed heavily from various others around the web.
