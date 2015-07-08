@@ -6,6 +6,18 @@ fancy_echo "Secondary local setup ..."
 
 bin=$(dirname -- "$0")
 
+#--- Ionic dev ---
+
+npm install -g cordova
+fancy_echo "Cordova CLI version: $(cordova -v)"
+npm install -g ionic
+fancy_echo "Ionic CLI version: $(ionic -v)"
+npm install -g ios-sim
+npm install -g ios-deploy
+
+# Need ant until Ionic migrates to Gradle/Android Studio
+brew install ant
+
 #--- Android dev ---
 
 # Cask default is latest JDK
@@ -15,6 +27,7 @@ java -version
 brew_install_or_upgrade gradle
 gradle -v
 
+brew cask install virtualbox
 brew cask install androidtool
 
 #--- Web dev ---
