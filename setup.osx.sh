@@ -55,6 +55,13 @@ defaults write com.apple.screencapture type -string "png"
 #defaults write com.apple.screencapture disable-shadow -bool true
 
 ###############################################################################
+# Apps                                                                        #
+###############################################################################
+
+# Safari enable developer menu
+defaults write com.apple.Safari IncludeDebugMenu 1
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
