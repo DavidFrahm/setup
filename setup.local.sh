@@ -43,8 +43,10 @@ fancy_echo "Gulp version: $(gulp -v)"
 npm install -g karma-cli
 # Getting version of global karma not as simple as others
 
-# Others for consideration:
-# brew_install_or_upgrade 'heroku-toolbelt'
+
+#--- Hosting ---
+
+brew_install_or_upgrade 'heroku-toolbelt'
 
 #--- Other ---
 
