@@ -6,29 +6,9 @@ fancy_echo "Secondary local setup ..."
 
 bin=$(dirname -- "$0")
 
-#--- Ionic dev ---
-
-npm install -g cordova
-fancy_echo "Cordova CLI version: $(cordova -v)"
-npm install -g ionic
-fancy_echo "Ionic CLI version: $(ionic -v)"
-npm install -g ios-sim
-npm install -g ios-deploy
-
-# Need ant until Ionic migrates to Gradle/Android Studio
-brew install ant
-
-#--- Android dev ---
-
-# Cask default is latest JDK
-brew cask install java
-java -version
-
-brew_install_or_upgrade gradle
-gradle -v
-
-brew cask install virtualbox
-brew cask install androidtool
+#--- Any dev ---
+brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'bash-completion'
 
 #--- Web dev ---
 
@@ -43,6 +23,30 @@ fancy_echo "Gulp version: $(gulp -v)"
 npm install -g karma-cli
 # Getting version of global karma not as simple as others
 
+#--- Android dev ---
+
+# Enable java install as needed; Disabled by default because its so slow
+# Cask default is latest JDK
+#brew cask install java
+java -version
+
+brew_install_or_upgrade gradle
+gradle -v
+
+brew cask install virtualbox
+brew cask install androidtool
+
+#--- Ionic dev ---
+
+npm install -g cordova
+fancy_echo "Cordova CLI version: $(cordova -v)"
+npm install -g ionic
+fancy_echo "Ionic CLI version: $(ionic -v)"
+npm install -g ios-sim
+npm install -g ios-deploy
+
+# Need ant until Ionic migrates to Gradle/Android Studio
+brew install ant
 
 #--- Hosting ---
 
@@ -61,8 +65,12 @@ brew cask cleanup --outdated
 
 # Dotfiles
 fancy_echo "Copying dotfiles ..."
-for dotfile in ".gitignore_global" \
-    ".gitconfig"; do
+for dotfile in ".bash_profile" \
+    ".bash_prompt" \
+    ".aliases" \
+    ".functions" \
+    ".gitconfig" \
+    ".gitignore_global"; do
 	cp $bin/dotfiles/"${dotfile}" ~/ > /dev/null 2>&1
 done
 
