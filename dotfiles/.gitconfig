@@ -83,6 +83,13 @@
 		fi \
 	}; f"
 
+	# Get local up-to-date
+	fpp = "!f() { \
+		git checkout master && \
+		git fetch origin --prune && \
+		git pull; \
+	}; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
