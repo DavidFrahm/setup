@@ -87,7 +87,7 @@
 	fpp = "!f() { \
 		git checkout master && \
 		git fetch origin --prune && \
-		git pull; \
+		git pull origin master; \
 	}; f"
 
 [apply]
