@@ -90,8 +90,11 @@
 		git pull origin master; \
 	}; f"
 
-	# Clean repo to clone state but leave JetBrains config
-	clean-idea = "clean -fxd :/ -e \.idea"
+	# Clean repo to fresh clone state but leave JetBrains config
+	clean-idea = "!f() { \
+		git reset --hard HEAD && \
+		git clean -fxd :/ -e \\.idea; \
+	}; f"
 
 [apply]
 
