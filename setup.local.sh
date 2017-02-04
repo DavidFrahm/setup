@@ -22,6 +22,8 @@ npm install -g gulp
 fancy_echo "Gulp version: $(gulp -v)"
 npm install -g karma-cli
 # Getting version of global karma not as simple as others
+npm install -g @angular/cli
+fancy_echo "Angular CLI version: $(ng -v)"
 
 #--- Android dev ---
 
@@ -46,7 +48,7 @@ npm install -g ios-sim
 npm install -g ios-deploy
 
 # Need ant until Ionic migrates to Gradle/Android Studio
-brew install ant
+#brew install ant
 
 #--- Hosting ---
 
