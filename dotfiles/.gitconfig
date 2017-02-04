@@ -96,6 +96,12 @@
 		git clean -fxd :/ -e \\.idea; \
 	}; f"
 
+	# Clean repo to fresh clone state but leave JetBrains config and node packages
+	clean-idea-node = "!f() { \
+		git reset --hard HEAD && \
+		git clean -fxd :/ -e \\.idea -e \\node_modules; \
+	}; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
