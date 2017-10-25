@@ -24,6 +24,8 @@ npm install -g karma-cli
 # Getting version of global karma not as simple as others
 npm install -g @angular/cli
 fancy_echo "Angular CLI version: $(ng -v)"
+npm install -g firebase-tools
+fancy_echo "Firebase CLI version: $(firebase --version)"
 
 #--- Android dev ---
 
